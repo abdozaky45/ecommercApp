@@ -1,0 +1,12 @@
+import { Router } from "express";
+import * as authController from "./controller/auth.js";
+ import { validation } from "../../middleware/validation.middleware.js";
+ import *as validator from "./auth.validation.js";
+const router = Router();
+router.post("/register",validation(validator.register),authController.register);
+router.get("/confirmEmail/:activationCode",validation(validator.activationCode),authController.confirmEmail);
+router.get("/newConfirmEmail/:activationCode",validation(validator.activationCode),authController.confirmEmail);
+router.post("/login",validation(validator.login),authController.login);
+router.patch('/forget',validation(validator.forgetPass),authController.forgetPass);
+router.patch("/resetPassword",validation(validator.resetPass),authController.resetPasswod);
+export default router;
