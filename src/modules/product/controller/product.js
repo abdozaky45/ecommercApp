@@ -153,3 +153,45 @@ export const SingleProduct = asyncHandler(async (req, res, next) => {
   //  const queryKeys = key.split(" "); //[...req.query>productName,price]
 
   //  const matchedKeys = queryKeys.filter((key)=>modelsKey.includes(key));
+
+
+
+
+
+
+
+
+
+
+  // missing finder : 
+//   const year = 2023; // السنة المطلوبة
+// const pageSize = 20; // حجم الصفحة
+
+// const page = 1; // الصفحة الأولى
+// const skip = (page - 1) * pageSize; // حساب عدد الوثائق التي يجب تخطيها
+
+// const startDate = new Date(year, 0, 1); // تاريخ بداية السنة
+// const endDate = new Date(year, 11, 31, 23, 59, 59, 999); // تاريخ نهاية السنة
+
+// // البحث عن المستخدمين بناءً على السنة المحددة
+// const users = await volunteerModel.find({
+//   dateOfLoss: {
+//     $gte: startDate,
+//     $lte: endDate
+//   }
+// }).limit(pageSize).skip(skip);
+
+// if (users.length > 0) {
+//   console.log("المستخدمون الذين فقدوا في العام المحدد: ", users);
+// } else {
+//   // الحصول على الأشهر المتاحة في السنة
+//   const availableMonths = await volunteerModel.distinct('dateOfLoss.month', {
+//     'dateOfLoss.year': year
+//   }).limit(pageSize).skip(skip);
+
+//   if (availableMonths.length > 0) {
+//     console.log("الأشهر المتاحة في العام المحدد: ", availableMonths);
+//   } else {
+//     console.log("لا يوجد نتائج لهذا العام.");
+//   }
+// }

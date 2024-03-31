@@ -13,7 +13,7 @@ const bootstrap = (express, app) => {
   if (process.env.Node_ENV === "dev") {
     app.use(morgan("dev"));
   }
-  CORS
+  
   const whiteList = ["Website-URL", "Application-URL"];
   app.use((req, res, next) => {
      // confirm email
